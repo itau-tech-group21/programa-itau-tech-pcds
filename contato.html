@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Boas notícias – Entre em Contato</title>
+        <!-- Anexa arquivo externo responsável pelos javascripts de máscara de cel e do botão de envio -->
+        <script type="text/javascript" src="scripts/contato.js"></script>
+        <!-- Anexa arquivo externo responsável pelos estilos -->
+        <link media="projection, screen, tv" rel="stylesheet" type="text/css" href="css/estilos.css">
+
+    </head>
+
+    <body>
+
+        <nav class="nav-contato">
+            <h1>Boas notícias</h1>
+            <div class="indice">
+                <a href="index.html">Home</a>
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="contato.html">Contato</a>
+                <a href="saibamais.html">Saiba Mais</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="centralizado">
+                <h2> CONTATO </h2>
+                <p>Preencha todos os campos.</p><br>
+            </div>
+            <!-- O método "onsubmit" checa se todos os campos estão preenchidos -->
+
+            <form onsubmit="sucesso()">
+                <div class="form">
+                    <label for="nome">Nome</LABEL>
+                    <input type="text" id="nome" required="">
+                </div>
+                <div class="form">
+                    <label for="sobrenome">Sobrenome</LABEL>
+                    <input type="text" id="sobrenome" required="">
+                </div>
+                <div class="form">
+                    <label for="email">E-mail</LABEL>
+                    <input type="email" id="email" required="">
+                </div>
+                <div class="form">
+                    <label for="tcel">Telefone celular com DDD</LABEL>
+                    <input type="text" id="tcel" maxlength="14" required="" onkeydown="javascript: fMasc( this, mCEL );">
+                </div>
+                <div class="form">
+                    <label for="experiencia">Conte um pouco mais como foi navegar em nosso site':</LABEL>
+                    <textarea id="experiencia" style="width: 26em;" rows="6"></textarea>
+                </div>
+                
+                <input type="submit" id="cadastrar" value="Enviar dados" />
+            </form>
+        </main>
+
+        <footer class="contato">
+            <h4>Copyright &copy; Grupo-21 - Covid 19</h4>
+        </footer>
+    </body>
+
+</html>
